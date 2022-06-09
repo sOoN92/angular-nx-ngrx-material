@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="container">
+    <div id="welcome">
+      <h1>
+        <span> Hello there, </span>
+        Welcome 👋
+      </h1>
+    </div>
+
+    <div class="cats-container">
+      <ng-container *ngFor="let cat of cats$ | async">
+        <div class="child">
+          <h3>{{ cat.title }}</h3>
+          <div>
+            <img [src]="cat.url" alt="" />
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

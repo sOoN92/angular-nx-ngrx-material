@@ -1,0 +1,42 @@
+.wrapper {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  .mat-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mat-card-header {
+    flex-shrink: 0;
+  }
+
+  .mat-card-content {
+    flex-grow: 1;
+    overflow: auto;
+  }
+
+  .card {
+    max-width: 400px;
+  }
+
+  .header-image {
+    background-size: cover;
+  }
+
+  .selected {
+    border: 3px solid yellowgreen;
+  }
+
+  .mat-card-image {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .mat-card-actions {
+    align-self: end;
+  }
+
+}

@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <ng-container *ngFor="let cat of cats$ | async">
+    <mat-card class="card" [ngClass]="{ selected: isSelected(cat.id) | async }">
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          class="header-image"
+          [style.background-image]="'url(' + cat.url + ')'"
+        ></div>
+        <mat-card-title>{{ cat.title }}</mat-card-title>
+        <mat-card-subtitle>{{ cat.origin }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="cat.url" [alt]="cat.title" />
+      <mat-card-content>
+        <p>
+          {{ cat.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="toggleSelectCat(cat)">{{(isSelected(cat.id) | async) ? 'DESELECT' : 'SELECT'}}</button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>
