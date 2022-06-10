@@ -4,11 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BrowserAnimationsModule,
-    NavigationComponent,
-  ],
+  imports: [CommonModule, BrowserAnimationsModule, NavigationComponent],
   exports: [NavigationComponent],
 })
-export class UiModule {}
+export class FeatShellModule {}

@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mfe-nx/shared/data-store": ["libs/shared/data-store/src/index.ts"],
-      "@mfe-nx/ui": ["libs/ui/src/index.ts"]
+      "@mfe-nx/feat-shell": ["libs/feat-shell/src/index.ts"],
+      "@mfe-nx/shared/data-store": ["libs/shared/data-store/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

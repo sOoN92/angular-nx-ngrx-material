@@ -11,13 +11,13 @@ import { environment } from '../environments/environment';
 
 import { HomeComponent } from './home/home.component';
 import { GalleryStoreModule } from '@mfe-nx/shared/data-store';
-import { UiModule } from '@mfe-nx/ui';
+import { FeatShellModule } from '@mfe-nx/feat-shell';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
-    UiModule,
+    FeatShellModule,
     RouterModule.forRoot(
       [
         {
@@ -36,7 +36,9 @@ import { UiModule } from '@mfe-nx/ui';
     ),
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
-    !environment.production ? StoreDevtoolsModule.instrument( { serialize: true }) : [],
+    !environment.production
+      ? StoreDevtoolsModule.instrument({ serialize: true })
+      : [],
     GalleryStoreModule,
   ],
   providers: [],

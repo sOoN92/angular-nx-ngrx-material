@@ -2,11 +2,11 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "feat-shell": "libs/feat-shell",
     "gallery": "apps/gallery",
     "gallery-e2e": "apps/gallery-e2e",
     "shared-data-store": "libs/shared/data-store",
     "shell": "apps/shell",
-    "shell-e2e": "apps/shell-e2e",
-    "ui": "libs/ui"
+    "shell-e2e": "apps/shell-e2e"
   }
 }
