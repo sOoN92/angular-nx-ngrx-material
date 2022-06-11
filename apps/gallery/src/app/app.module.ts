@@ -9,11 +9,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { GalleryStoreModule } from '@mfe-nx/shared/data-store';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    GalleryStoreModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     RouterModule.forRoot(
       [
         {
